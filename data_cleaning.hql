@@ -98,7 +98,6 @@ load data local inpath '/home/teyaoyl2/Stat480/HW/Group_project/plane_data.csv'
 into table carrier;
 
 -- view for join delayed and airport data
-
 create view delayed_airport
 as
 select * from 
@@ -106,6 +105,14 @@ delay as d left join airports as a
 on d.Origin = a.iata;
 
 
+-- view for join delayed and airport data (destination)
+create view delayed_airport_dest
+as
+select * from 
+delay as d left join airports as a
+on d.Dest = a.iata;
+
+select regexp_extract(DepTime , )
 
 
 
