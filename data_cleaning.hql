@@ -6,15 +6,17 @@
 -- Create the delay table
 set hive.cli.print.header=true;
 
+drop table delay;
+
 Create table delay (
 Year INT,
 Month INT,
 DayofMonth INT,
 DayOfWeek INT,
-DepTime STRING,
-CRSDepTime STRING,
-ArrTime STRING,
-CRSArrTime STRING,
+DepTime INT,
+CRSDepTime INT,
+ArrTime INT,
+CRSArrTime INT,
 UniqueCarrier STRING,
 FlightNum STRING,
 TailNum STRING,
